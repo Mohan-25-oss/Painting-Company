@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     const teamMembers = [
@@ -63,12 +64,24 @@ const About = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#fde68a,_#f9a8d4,_#93c5fd,_#6ee7b7)] animate-gradient-slow">
+
             {/* Header Section */}
             <section className="relative bg-gradient-to-br from-blue-800 to-blue-600 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative container mx-auto px-4 text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6">About Our Company</h1>
+                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-center animate-fadeInUp">
+                        <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                            About
+                        </span>{" "}
+                        <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent animate-pulse">
+                            Our
+                        </span>{" "}
+                        <span className="bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500 bg-clip-text text-transparent animate-bounce">
+                            Company
+                        </span>
+                    </h1>
+
                     <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
                         With over 15 years of excellence in painting services, we transform spaces and exceed expectations
                     </p>
@@ -76,7 +89,8 @@ const About = () => {
             </section>
 
             {/* Our Story Section */}
-            <section className="py-16 bg-white">
+            <section className="py-16 bg-gradient-to-r from-pink-200 via-purple-200 to-indigo-200">
+
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
@@ -133,7 +147,8 @@ const About = () => {
             </section>
 
             {/* Our Values Section */}
-            <section className="py-16 bg-white">
+           <section className="py-16 bg-gradient-to-br from-yellow-100 via-orange-100 to-pink-100">
+
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Values</h2>
@@ -155,7 +170,8 @@ const About = () => {
             </section>
 
             {/* Team Section */}
-            <section className="py-16 bg-gray-50">
+           <section className="py-16 bg-gradient-to-tr from-blue-100 via-teal-100 to-green-100">
+
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
@@ -194,7 +210,8 @@ const About = () => {
             </section>
 
             {/* Process Section */}
-            <section className="py-16 bg-white">
+           <section className="py-16 bg-gradient-to-bl from-rose-100 via-amber-100 to-lime-100">
+
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Process</h2>
@@ -251,7 +268,7 @@ const About = () => {
                             Get Free Estimate
                         </button>
                         <button className="border-2 border-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
-                            Meet Our Team
+                            <Link to="/contact">Meet Our Team</Link>
                         </button>
                     </div>
                 </div>

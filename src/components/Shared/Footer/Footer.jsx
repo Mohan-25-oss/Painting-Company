@@ -18,18 +18,69 @@ const Footer = () => {
                             <span className="ml-3 text-2xl font-bold tracking-wide">ProPainters</span>
                         </div>
                         <p className="text-gray-200 mb-6 leading-relaxed max-w-md">
-                            🎨 Transforming homes and businesses with color, creativity, and craftsmanship.  
+                            🎨 Transforming homes and businesses with color, creativity, and craftsmanship.
                             Let your walls tell a story of elegance and excellence.
                         </p>
 
+                        {/* Add this to your index.html */}
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
                         <div className="flex space-x-4">
-                            {['📘', '📷', '🐦', '💼'].map((icon, index) => (
-                                <div
+                            {[
+                                {
+                                    icon: 'fab fa-facebook-f',
+                                    platform: 'Facebook',
+                                    url: 'https://www.facebook.com/profile.php?id=61578493127709&sk=about',
+                                    color: 'hover:bg-blue-600'
+                                },
+                                {
+                                    icon: 'fab fa-instagram',
+                                    platform: 'Instagram',
+                                    url: 'https://instagram.com/your-profile',
+                                    color: 'hover:bg-gradient-to-r hover:from-purple-600 hover:via-pink-600 hover:to-orange-500'
+                                },
+                                {
+                                    icon: 'fab fa-whatsapp',
+                                    platform: 'WhatsApp',
+                                    url: 'https://wa.me/your-number',
+                                    color: 'hover:bg-green-500'
+                                },
+                                {
+                                    icon: 'fab fa-youtube',
+                                    platform: 'YouTube',
+                                    url: 'https://youtube.com/your-channel',
+                                    color: 'hover:bg-red-600'
+                                },
+                                {
+                                    icon: 'fab fa-tiktok',
+                                    platform: 'TikTok',
+                                    url: 'https://tiktok.com/@your-profile',
+                                    color: 'hover:bg-black'
+                                },
+                                {
+                                    icon: 'fab fa-linkedin-in',
+                                    platform: 'LinkedIn',
+                                    url: 'https://linkedin.com/company/your-company',
+                                    color: 'hover:bg-blue-500'
+                                },
+                                {
+                                    icon: 'fab fa-twitter',
+                                    platform: 'Twitter',
+                                    url: 'https://twitter.com/your-profile',
+                                    color: 'hover:bg-blue-400'
+                                }
+                            ].map((social, index) => (
+                                <a
                                     key={index}
-                                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-2xl cursor-pointer hover:scale-110 hover:bg-yellow-400 hover:text-blue-900 transition-all duration-300"
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-white cursor-pointer hover:scale-110 ${social.color} transition-all duration-300 backdrop-blur-sm border border-white/30 hover:border-transparent group`}
+                                    title={`Follow us on ${social.platform}`}
+                                    aria-label={`Follow us on ${social.platform}`}
                                 >
-                                    {icon}
-                                </div>
+                                    <i className={`${social.icon} text-lg group-hover:text-white`}></i>
+                                </a>
                             ))}
                         </div>
                     </div>
