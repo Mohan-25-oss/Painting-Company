@@ -254,7 +254,7 @@ const Reviews = () => {
             <section className="relative bg-gradient-to-br from-green-600 to-green-800 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative container mx-auto px-4 text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold mb-6">Client <span className='text-yellow-400'>Reviews</span></h1>
+                    <h1 className="mt-16 text-3xl md:text-6xl font-bold mb-6">Client <span className='text-yellow-400'>Reviews</span></h1>
                     <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto">
                         See what our satisfied customers have to say about our painting services
                     </p>

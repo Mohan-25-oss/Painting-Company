@@ -55,11 +55,11 @@ const Services = () => {
 
     return (
         <section id="services" className="py-16 bg-gray-50 mt-5">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-3">
                 {/* Section Header */}
                 <div className="text-center mb-16">
                     {/* Title */}
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                    <h2 className="text-2xl mt-9 md:text-5xl text-center font-extrabold mb-4 leading-tight">
                         Our{" "}
                         <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                             Professional

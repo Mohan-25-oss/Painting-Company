@@ -31,12 +31,12 @@ const Contact = () => {
     }
 
     return (
-        <section id="contact" className="py-20 bg-gradient-to-br from-primary to-secondary">
+        <section id="contact" className="py-16 mt-16 bg-gradient-to-br from-primary to-secondary">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-12">
                     {/* Contact Information */}
                     <div className="text-white">
-                        <h2 className="text-4xl text-center font-bold mb-6">Get In Touch</h2>
+                        <h2 className="text-4xl text-center font-bold mb-6">Get In <span className='text-yellow-400'>Touch</span></h2>
                         <p className="text-xl mb-8 opacity-90">
                             Ready to transform your space? Contact us for a free estimate and consultation.
                         </p>

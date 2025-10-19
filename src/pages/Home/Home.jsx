@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -24,58 +25,85 @@ const Home = () => {
     ];
 
     return (
-        <div className="min-h-screen mt-15 bg-[conic-gradient(at_top_left,_#facc15,_#f472b6,_#60a5fa,_#34d399)]">
+        <div className="min-h-screen md:mt-22 bg-[conic-gradient(at_top_left,_#facc15,_#f472b6,_#60a5fa,_#34d399)]">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-r from-blue-900 via-purple-700 to-pink-600 text-white">
                 <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")' }}></div>
                 <div className="relative container mx-auto px-4 py-24">
-                    <div className="max-w-2xl text-center">
-                        <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    <div className="max-w-2xl mt-0 text-center">
+                        <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
                             Professional <span className="text-yellow-400">Painting</span> Services
                         </h1>
                         <p className="text-xl md:text-2xl mb-8 text-blue-100">
                             Transform your space with our expert painting solutions. Quality workmanship guaranteed.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                            <Link to="/contact" className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
                                 Get Free Estimate
-                            </button>
-                            <button className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
+                            </Link>
+                            <Link to="/services" className="border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
                                 View Our Work
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Features Section */}
-            <section className="py-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-white text-center rounded-3xl mx-4 lg:mx-16 mt-16 shadow-2xl">
-                <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-                            <div className="w-16 h-16 bg-gradient-to-tr from-yellow-200 via-pink-200 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl">🎨</span>
+            <section className="relative py-24 overflow-hidden rounded-3xl mx-4 lg:mx-16 mt-16 shadow-2xl">
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#f472b6,_#a78bfa,_#60a5fa,_#34d399,_#facc15)] animate-gradient-xy opacity-95"></div>
+
+                <div className="relative container mx-auto px-4 text-center text-white">
+                    <h2 className="relative text-5xl md:text-6xl font-extrabold mb-16 text-transparent bg-clip-text 
+bg-gradient-to-r from-pink-400 via-yellow-400 to-cyan-400 animate-gradient-x drop-shadow-[0_0_25px_rgba(255,255,255,0.5)] tracking-tight">
+                        Why <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 animate-gradient-x">Clients</span>{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-400 to-blue-500 animate-gradient-x">Love</span>{" "}
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 animate-gradient-x">Us</span>{" "}
+                        <span className="inline-block animate-bounce text-pink-400">💖</span>
+
+                        {/* glowing underline */}
+                        <span className="absolute left-1/2 -bottom-2 w-2/3 h-[3px] bg-gradient-to-r from-yellow-300 via-pink-400 to-cyan-400 rounded-full -translate-x-1/2 blur-md animate-pulse"></span>
+                    </h2>
+
+
+                    <div className="grid md:grid-cols-3 gap-10">
+                        {/* Card 1 */}
+                        <div className="group text-center p-8 rounded-3xl shadow-lg border-4 border-transparent bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-500 text-white hover:shadow-2xl hover:scale-105 transition-all duration-500 transform hover:-translate-y-2">
+                            <div className="w-20 h-20 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-4xl">🎨</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-3">Quality Materials</h3>
-                            <p className="text-gray-600">We use only premium paints and materials for lasting results</p>
+                            <h3 className="text-2xl font-bold mb-3">Quality Materials</h3>
+                            <p className="text-white/90 leading-relaxed">
+                                We use only premium paints and materials to ensure a flawless and lasting finish.
+                            </p>
                         </div>
-                        <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-                            <div className="w-16 h-16 bg-gradient-to-tr from-cyan-200 via-blue-200 to-indigo-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl">⏱️</span>
+
+                        {/* Card 2 */}
+                        <div className="group text-center p-8 rounded-3xl shadow-lg border-4 border-transparent bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 text-white hover:shadow-2xl hover:scale-105 transition-all duration-500 transform hover:-translate-y-2">
+                            <div className="w-20 h-20 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-4xl">⏱️</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-3">On-Time Completion</h3>
-                            <p className="text-gray-600">We respect your time and complete projects as promised</p>
+                            <h3 className="text-2xl font-bold mb-3">On-Time Completion</h3>
+                            <p className="text-white/90 leading-relaxed">
+                                We respect your time and ensure every project is completed right on schedule.
+                            </p>
                         </div>
-                        <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300">
-                            <div className="w-16 h-16 bg-gradient-to-tr from-green-200 via-lime-200 to-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <span className="text-2xl">💰</span>
+
+                        {/* Card 3 */}
+                        <div className="group text-center p-8 rounded-3xl shadow-lg border-4 border-transparent bg-gradient-to-br from-green-400 via-lime-400 to-yellow-400 text-white hover:shadow-2xl hover:scale-105 transition-all duration-500 transform hover:-translate-y-2">
+                            <div className="w-20 h-20 bg-white/30 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
+                                <span className="text-4xl">💰</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-800 mb-3">Fair Pricing</h3>
-                            <p className="text-gray-600">Competitive rates with no hidden costs</p>
+                            <h3 className="text-2xl font-bold mb-3">Fair Pricing</h3>
+                            <p className="text-white/90 leading-relaxed">
+                                Transparent, honest, and competitive pricing — no surprises, just value.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
+
 
             {/* Services Preview */}
             <section className="py-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-white text-center rounded-3xl mx-4 lg:mx-16 mt-16 shadow-2xl">
@@ -131,13 +159,20 @@ const Home = () => {
                     Contact us today for a free estimate and consultation!
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-2xl text-lg transition duration-300 transform hover:scale-105">
-                        📞 Call Now
-                    </button>
-                    <button className="border-2 border-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-2xl text-lg transition duration-300">
-                        ✉️ Get Quote
-                    </button>
-                </div>
+    <Link 
+        to="/contact" 
+        className="bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-500 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-lg transition duration-300 transform hover:scale-105 hover:brightness-110"
+    >
+        📞 Call Now
+    </Link>
+    <Link 
+        to="/contact" 
+        className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-lg transition duration-300 transform hover:scale-105 hover:brightness-110"
+    >
+        ✉️ Get Quote
+    </Link>
+</div>
+
             </section>
 
         </div>

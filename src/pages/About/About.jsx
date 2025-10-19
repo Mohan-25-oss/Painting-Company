@@ -64,13 +64,13 @@ const About = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,_#fde68a,_#f9a8d4,_#93c5fd,_#6ee7b7)] animate-gradient-slow">
+        <div className="min-h-screen mt-10 bg-[radial-gradient(circle_at_top_left,_#fde68a,_#f9a8d4,_#93c5fd,_#6ee7b7)] animate-gradient-slow">
 
             {/* Header Section */}
             <section className="relative bg-gradient-to-br from-blue-800 to-blue-600 text-white py-20">
                 <div className="absolute inset-0 bg-black opacity-20"></div>
                 <div className="relative container mx-auto px-4 text-center">
-                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-center animate-fadeInUp">
+                    <h1 className="text-3xl md:text-6xl font-extrabold mb-6 text-center animate-fadeInUp">
                         <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                             About
                         </span>{" "}

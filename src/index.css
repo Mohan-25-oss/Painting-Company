@@ -1,57 +1,45 @@
 :root {
-    --color-primary: #00C3B9;
-    --color-secondary: #09514D;
-    --color-accent: #C5597B;
+    --color-primary: #00c3b9;
+    --color-secondary: #09514d;
+    --color-accent: #c5597b;
+    --color-glow: rgba(255, 255, 255, 0.6);
 }
 
+/* ✨ Floating animation with a bit of smooth scaling */
 @keyframes float {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-12px) scale(1.03);
     }
 }
 
 .animate-float {
-    animation: float 4s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
+/* 💫 Smooth fade-in + slide-up */
 @keyframes fadeInUp {
-    from {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
 
-    to {
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 .animate-fadeInUp {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fadeInUp {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
+/* 🌈 Dynamic gradient motion (background animation) */
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
@@ -67,6 +55,57 @@
 }
 
 .animate-gradient-slow {
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+}
+
+/* ⚡ Faster multi-directional gradient */
+@keyframes gradient-xy {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient-xy {
+    background-size: 400% 400%;
+    animation: gradient-xy 8s ease-in-out infinite;
+}
+
+/* 🔥 Animated gradient for text */
+@keyframes gradient-x {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient-x {
     background-size: 200% 200%;
-    animation: gradientMove 15s ease infinite;
+    animation: gradient-x 4s linear infinite;
+}
+
+/* 🌟 Glow effect for eye-catching titles or buttons */
+.glow {
+    text-shadow: 0 0 10px var(--color-glow),
+        0 0 20px var(--color-glow),
+        0 0 40px var(--color-glow);
+}
+
+/* 💥 Optional subtle hover glow for cards/buttons */
+.hover-glow:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3),
+        0 0 50px rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    transition: all 0.4s ease;
 }

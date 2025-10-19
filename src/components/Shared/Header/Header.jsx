@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../../../assets/logo.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,18 +9,28 @@ const Header = () => {
         <header className="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 text-white shadow-xl fixed w-full top-0 z-50 backdrop-blur-md bg-opacity-95">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
-                        <span className="text-blue-900 font-bold text-xl">P</span>
+                <Link to="/" className="flex items-center space-x-4 group">
+                    {/* Simplified Gradient Logo */}
+                    <div className="w-15 h-15 rounded-full flex items-center justify-center shadow-2xl
+    bg-gradient-to-r from-cyan-400 to-purple-500 
+    group-hover:from-purple-500 group-hover:to-cyan-400 
+    transition-all duration-500 group-hover:scale-110">
+                        <img
+                            src={Logo}
+                            alt="ProPainters Logo"
+                            className="w-10 h-10 rounded-full transition-transform group-hover:rotate-12 duration-500"
+                        />
                     </div>
-                    <span className="text-2xl font-extrabold tracking-wide text-yellow-400 drop-shadow-lg">
+
+                    {/* Brand Name */}
+                    <span className="text-3xl font-extrabold tracking-wide bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent group-hover:from-purple-500 group-hover:to-cyan-400 transition-all duration-500">
                         ProPainters
                     </span>
-                </div>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-8">
-                    {['Home', 'About', 'Hero', 'Services', 'Portfolio', 'Reviews', 'Contact'].map((item, index) => (
+                    {['Home', 'About', 'Hero', 'Services', 'Portfolio', 'Reviews', 'Blog', 'Contact'].map((item, index) => (
                         <Link
                             key={index}
                             to={`/${item.toLowerCase()}`}
@@ -47,7 +58,7 @@ const Header = () => {
             {isMenuOpen && (
                 <div className="md:hidden bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 px-6 pb-6 animate-fadeInDown">
                     <div className="flex flex-col space-y-4 mt-4">
-                        {['Home', 'About', 'Hero', 'Services', 'Portfolio', 'Reviews', 'Contact'].map((item, index) => (
+                        {['Home', 'About', 'Hero', 'Services', 'Portfolio', 'Reviews', 'Blog', 'Contact'].map((item, index) => (
                             <Link
                                 key={index}
                                 to={`/${item.toLowerCase()}`}

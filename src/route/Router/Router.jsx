@@ -7,6 +7,7 @@ import Hero from "../../pages/Hero/Hero";
 import Services from "../../pages/Services/Services";
 import Portfolio from "../../pages/Portfolio/Portfolio";
 import Reviews from "../../pages/Reviews/Reviews";
+import Blog from "../../pages/Blog/Blog";
 // import NotFound from "../../../NotFound";
 // import SignIn from "../../pages/SignIn/SignIn";
 // import SignUp from "../../pages/SignUp/SignUp";
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: '/reviews',
                 element: <Reviews></Reviews>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             {
                 path: '/contact',
